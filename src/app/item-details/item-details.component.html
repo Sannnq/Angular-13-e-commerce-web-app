@@ -1,0 +1,27 @@
+<section
+  class="deal-of-week set-bg spad"
+  style="padding-top: 120px; padding-bottom: 100px"
+>
+  <div class="container d-flex" id="item" *ngIf="item">
+    <div class="col-lg-6 text-center" style="padding-top: 40px">
+      <div class="section-title">
+        <h2>{{ item.title }}</h2>
+        <h3></h3>
+        <p>{{ item.description }}</p>
+        <div class="product-price">
+          {{ "$" + item.price }}
+        </div>
+      </div>
+      <button (click)="ajouterPanier(item)" class="primary-btn">
+        Ajouter au panier
+      </button>
+    </div>
+    <div style="margin-left: 20px">
+      <img
+        alt="{{ item.title }}"
+        src="{{ item.image }}"
+        style="border-radius: 15px"
+      />
+    </div>
+  </div>
+</section>

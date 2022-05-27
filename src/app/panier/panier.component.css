@@ -1,0 +1,6 @@
+#panier li {
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
+  align-items: center;
+}

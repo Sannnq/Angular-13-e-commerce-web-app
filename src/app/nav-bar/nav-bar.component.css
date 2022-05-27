@@ -1,0 +1,17 @@
+@font-face {
+  font-family: ACME;
+  src: url(../../assets/mufflu.otf);
+}
+
+.logo img {
+  width: 50%;
+}
+
+#bar ul li {
+  float: right;
+  left: 0;
+}
+#Brand {
+  font-family: ACME;
+  font-size: 45px;
+}

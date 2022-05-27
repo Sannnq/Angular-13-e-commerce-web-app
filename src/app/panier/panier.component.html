@@ -1,0 +1,20 @@
+<div style="padding-top: 300px; margin-bottom: 400px">
+  <!-- Jumbotron -->
+  <div class="p-5 text-center bg-light">
+    <ul class="list-group" id="panier" *ngFor="let element of elements">
+      <li class="list-group-item text-start">
+        <img
+          alt=""
+          style="border-radius: 10px"
+          src="{{ element.image }}"
+          height="50"
+        /><b>{{ element.title }}</b
+        ><span>{{ "$" + element.price }}</span>
+      </li>
+    </ul>
+  </div>
+  <button class="primary-btn" (click)="ViderPanier()" role="button">
+    Acheter
+  </button>
+  <!-- Jumbotron -->
+</div>

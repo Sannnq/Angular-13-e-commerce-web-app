@@ -1,0 +1,42 @@
+<div class="container" id="content" style="margin-top: 200px">
+  <div
+    class="product-item d-flex justify-content-center"
+    id="content_child"
+    style="width: 100%"
+    *ngFor="let item of items"
+  >
+    <div class="card col-3" style="width: 18rem">
+      <div class="">
+        <div class="pi-pic">
+          <a [routerLink]="['/items', item.id]">
+            <img src="{{ item.image }}" alt=""
+          /></a>
+          <div class="sale">{{ "Disponible" }}</div>
+          <div class="icon">
+            <i class="icon_heart_alt"></i>
+          </div>
+          <ul>
+            <li class="w-icon active">
+              <a href="#"><i class="icon_bag_alt"></i></a>
+            </li>
+            <li class="quick-view">
+              <a [routerLink]="['/items', item.id]"><b>+ En Savoir plus</b></a>
+            </li>
+            <li class="w-icon">
+              <a href="#"><i class="fa fa-random"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="pi-text">
+          <div class="catagory-name">SHOES</div>
+          <a [routerLink]="['/items', item.id]">
+            <h5>{{ item.title }}</h5>
+          </a>
+          <div class="product-price">
+            {{ "$" + item.price }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
